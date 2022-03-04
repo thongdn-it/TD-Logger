@@ -1,4 +1,11 @@
 extension StringUtils on StackTrace {
+  /// Get a string current stack trace with [maxLines] and [beginIndex]
+  ///
+  /// For example:
+  /// ```
+  ///   #0  main (file://td_logger/test/td_logger_test.dart:4:10)
+  ///   #1  new Future.<anonymous closure> (dart:async/future.dart:252:37)
+  /// ```
   String? format({int maxLines = 2, int beginIndex = 0}) {
     List<String> _lines = toString().split('\n');
     if (beginIndex > 0 && beginIndex < _lines.length - 1) {

@@ -7,6 +7,7 @@ import 'stack_trace_utils.dart';
 abstract class Logger {
   static String? name;
 
+  /// Log a string message, you can also pass other objects (like List, Map or Set).
   static void log(Object? object,
       {Level level = Level.verbose,
       String? name,

@@ -1,6 +1,6 @@
 name: td_logger
-description: A simple logger for Flutter.
-version: 1.0.0
+description: Small, easy to use and extensible logger for Flutter (Only in debug mode).
+version: 1.0.1
 homepage: https://github.com/thongdn-it/TD-Logger/tree/master
 repository: https://github.com/thongdn-it/TD-Logger/tree/master
 

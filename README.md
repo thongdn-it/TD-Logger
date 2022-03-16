@@ -7,12 +7,17 @@ TD Logger is a simple logger for Flutter.
 ## Usage
 
 ```dart
+  enum LogType { short, full }
+```
+
+```dart
   Logger.name = 'ThongDN'; // Set name of Logger (default: TDLogger)
 
-  Logger.log('TD Logger -> Log');
+  Logger.log('TD Logger -> Log', type: LogType.short);
+  Logger.info('TD Logger -> Info', type: LogType.short);
+  Logger.warning('TD Logger -> Warning', type: LogType.short);
+
   Logger.debug('TD Logger -> Debug');
-  Logger.info('TD Logger -> Info');
-  Logger.warning('TD Logger -> Warning');
   Logger.error('TD Logger -> Error');
 ```
 
@@ -23,29 +28,18 @@ Note: **_This only print log in debug mode_**
 ## Output
 
 ```
-flutter: ┌------ ThongDN: 2022-03-03 17:43:39.380490 ------
-flutter: │#0 _MyHomePageState._testLog
-flutter: ├---------------------- Log ----------------------
-flutter: │TD Logger -> Log
-flutter: └-------------------------------------------------
+flutter: ThongDN: TD Logger -> Log
 
-flutter: ┌------ ThongDN: 🐞  2022-03-03 17:43:39.409235 -------
+flutter: ℹ️ ThongDN: TD Logger -> Info
+
+flutter: ⚠️ ThongDN: TD Logger -> Warning
+
+
+flutter: ┌------ ThongDN: 🐞 2022-03-16 17:00:37.324065 ------
 flutter: │#0 _MyHomePageState._testLog
 flutter: ├------------------------ Log ------------------------
 flutter: │TD Logger -> Debug
-flutter: └-----------------------------------------------------
-
-flutter: ┌------ ThongDN: ℹ️  2022-03-03 17:43:39.421517 ------
-flutter: │#0 _MyHomePageState._testLog
-flutter: ├------------------------ Log ------------------------
-flutter: │TD Logger -> Info
-flutter: └-----------------------------------------------------
-
-flutter: ┌------ ThongDN: ⚠️  2022-03-03 17:31:28.377562 ------
-flutter: │#0 _MyHomePageState._testLog
-flutter: ├------------------------ Log ------------------------
-flutter: │TD Logger -> Warning
-flutter: └-----------------------------------------------------
+flutter: └----------------------------------------------------
 
 flutter: ┌------ ThongDN: ⛔  2022-03-03 17:43:39.434566 ------
 flutter: │#0 _MyHomePageState._testLog
